@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		body{ background-color: #000000}
+
+		#lienzo{
+			border: 10px groove;
+			border-color: #FF0000;
+			background-color: #FFFFFF;
+		}
+		
+	</style>
+</head>
+<body>
+	<canvas id="lienzo" width="500" height="500"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+	var canvas=document.getElementById('lienzo');
+	if(canvas.getContext){
+		var ctx=canvas.getContext('2d');
+		ctx.strokeStyle="rgb(124,137,176)";
+		ctx.fillStyle="rgb(124,137,176)";
+	
+	ctx.moveTo(49,142);
+	ctx.quadraticCurveTo(62,134,70,132);
+	ctx.quadraticCurveTo(67,81,134,82);
+	ctx.quadraticCurveTo(165,40,200,52);
+	ctx.quadraticCurveTo(179,69,176,90);
+	ctx.quadraticCurveTo(232,103,259,212);
+	ctx.bezierCurveTo(273,208,283,228,300,229);
+	ctx.quadraticCurveTo(282,243,262,233);
+	ctx.quadraticCurveTo(261,263,240,278);
+	ctx.bezierCurveTo(250,262,240,229,247,216);
+	ctx.quadraticCurveTo(201,158,164,144);
+	ctx.quadraticCurveTo(151,166,167,188);
+	ctx.quadraticCurveTo(123,180,132,138);
+	ctx.bezierCurveTo(116,137,90,164,56,151);
+	ctx.quadraticCurveTo(54,147,55,147);
+	ctx.quadraticCurveTo(49,147,49,142);
+	
+	ctx.strokeStyle="red";
+	ctx.lineWidth=1;
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(55,147);
+	ctx.bezierCurveTo(68,141,76,156,91,138);
+	ctx.strokeStyle="black";
+	ctx.lineWidth=3;
+	ctx.stroke();
+	ctx.closePath();
+
+
+	ctx.strokeStyle="rgb(78,102,180)";
+		ctx.fillStyle="rgb(78,102,180)";
+
+	ctx.beginPath();
+	ctx.moveTo(95,124);
+	ctx.quadraticCurveTo(91,113,88,127);
+	ctx.quadraticCurveTo(92,131,95,124);
+	ctx.strokeStyle="black";
+	ctx.lineWidth=1;
+	ctx.fill();
+	ctx.closePath();
+	
+		
+
+
+	}else{
+		alert("Su navegador no soporta canvas :O");
+	}
+</script>
